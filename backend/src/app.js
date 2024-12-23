@@ -1,29 +1,14 @@
-const swaggerUi = require('swagger-ui-express');
-const swaggerJsdoc = require('swagger-jsdoc');
-const express = require('express');
+import express from 'express';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocs from './docs/index.js';
+
+import userRoutes from './routes/userRoutes.js';
 const app = express();
-const port = 3000;
-
-const swaggerOptions = {
-    definition: {
-        openapi: '3.0.0',
-        info: {
-            title: 'API Documentation',
-            version: '1.0.0',
-            description: 'Descrição da API usando Swagger',
-        },
-        servers: [
-            {
-                url: 'http://localhost:3000' // URL base da API
-            },
-        ],
-    },
-    apis: ['./routes/*.js'] // Caminho para os arquivos onde defino minhas rotas
-}
-
-const swaggerDocs = swaggerJsdoc(swaggerOptions);
+const PORT = 3000;
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+app.use('/api', userRoutes);
 
 // Rota principal
 app.get('/', (req, res) => {
@@ -31,6 +16,6 @@ app.get('/', (req, res) => {
 });
 
 // Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}/`);
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}/`);
 });
