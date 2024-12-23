@@ -54,7 +54,7 @@ Se não tiver, [baixe aqui](https://nodejs.org/) e instale.
 
 3. Inicie o servidor:
    ```bash
-   node src/index.js
+   node src/app.js
    ```
 
 4. O servidor estará disponível em `http://localhost:3000`. Acesse no navegador ou use ferramentas como **Postman** para testes.
