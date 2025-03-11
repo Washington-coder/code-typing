@@ -12,6 +12,9 @@
 
   --brown-100: #382222;
   --brown-200: #FFEAEA;
+
+  --green-100: #00dc82;
+  --green-200: #36e4da;
 }
 
 * {
@@ -22,6 +25,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
   background: var(--black-100);
   color: var(--white-100);
 }
