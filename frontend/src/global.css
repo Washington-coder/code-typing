@@ -1,0 +1,26 @@
+:root {
+  --white: #ffffff;
+
+  --gray-100: #F5F7FA;
+  --gray-200: #CED4DA;
+  --gray-300: #868E96;
+  --gray-400: #6C757D;
+  --gray-500: #212529;
+
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-family: 'Roboto';
+}
