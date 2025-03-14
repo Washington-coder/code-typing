@@ -1,4 +1,3 @@
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import {
   PageContainer,
   KeyboardLineContainer
@@ -19,32 +18,9 @@ export interface WindowsKeyboardType {
   secondaryLabel?: string;
   width: number;
   height: number;
-  children?: React.ReactNode;
 }
 
 export function Typing() {
-
-  function renderKeyWithSecondaryLabel(keyboardItem: WindowsKeyboardType) {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-        <p>{keyboardItem.secondaryLabel}</p>
-        <p>{keyboardItem.label}</p>
-      </div>
-    )
-  }
-
-  function renderUpDownKey() {
-    return (
-      <div style={{ display: 'flex', width: '100%', flexDirection: 'column', gap: '0.3rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FaChevronUp />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FaChevronDown />
-        </div>
-      </div>
-    )
-  }
 
   return (
     <PageContainer>
@@ -53,7 +29,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_FIRST_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>{keyboardItem.label}</KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
@@ -62,13 +38,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_SECOND_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>
-                  {keyboardItem.secondaryLabel ?
-                    renderKeyWithSecondaryLabel(keyboardItem)
-                    :
-                    keyboardItem.label
-                  }
-                </KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
@@ -77,7 +47,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_THIRD_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>{keyboardItem.label}</KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
@@ -86,13 +56,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_FOURTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>
-                  {keyboardItem.secondaryLabel ?
-                    renderKeyWithSecondaryLabel(keyboardItem)
-                    :
-                    keyboardItem.label
-                  }
-                </KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
@@ -101,13 +65,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_FIFTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>
-                  {keyboardItem.secondaryLabel ?
-                    renderKeyWithSecondaryLabel(keyboardItem)
-                    :
-                    keyboardItem.label
-                  }
-                </KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
@@ -116,13 +74,7 @@ export function Typing() {
           {
             WINDOWS_KEYBOARD_DATA_SIXTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItem {...keyboardItem}>
-                  {keyboardItem.label === 'up-down' ?
-                    renderUpDownKey()
-                    :
-                    keyboardItem.label
-                  }
-                </KeyboardItem>
+                <KeyboardItem {...keyboardItem} />
               )
             })
           }
