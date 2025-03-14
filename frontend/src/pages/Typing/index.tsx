@@ -1,3 +1,4 @@
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import {
   PageContainer,
   KeyboardItemContainer,
@@ -135,8 +136,20 @@ export function Typing() {
                   height={keyboardItem.height}
                   labelPosition={keyboardItem.labelPosition}
                 >
-                  {keyboardItem.label}
+                  {keyboardItem.label === 'up-down' ?
+                    <div style={{ display: 'flex', width: '100%', flexDirection: 'column', gap: '0.3rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <FaChevronUp />
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <FaChevronDown />
+                      </div>
+                    </div>
+                    :
+                    keyboardItem.label
+                  }
                 </KeyboardItemContainer>
+
               )
             })
           }

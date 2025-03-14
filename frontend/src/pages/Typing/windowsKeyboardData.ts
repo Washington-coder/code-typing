@@ -91,8 +91,7 @@ export const WINDOWS_KEYBOARD_DATA_SIXTH_LINE: WindowsKeyboardData[] = [
     { id: 70, label: 'Space', labelPosition: 'center', width: 250, height: 40 },
     { id: 71, label: 'Alt', labelPosition: 'center', width: 40, height: 40 },
     { id: 72, label: 'Ctrl', labelPosition: 'center', width: 40, height: 40 },
-    { id: 73, label: '<', labelPosition: 'center', width: 40, height: 40 },
-    { id: 74, label: 'up', labelPosition: 'center', width: 40, height: 40 },
-    { id: 75, label: 'down', labelPosition: 'center', width: 40, height: 40 },
-    { id: 76, label: '>', labelPosition: 'center', width: 40, height: 40 },
+    { id: 73, label: 'left', labelPosition: 'center', width: 40, height: 40 },
+    { id: 74, label: 'up-down', labelPosition: 'center', width: 40, height: 40 },
+    { id: 76, label: 'right', labelPosition: 'center', width: 40, height: 40 },
 ];
