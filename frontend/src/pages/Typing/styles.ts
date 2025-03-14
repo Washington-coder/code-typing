@@ -42,7 +42,7 @@ export const KeyboardItemContainer = styled.div<{
     align-items: center;
     justify-content: ${props => props.labelPosition};
 
-    padding: 0.4rem;
+    padding: 0.5rem;
     width: ${props => props.width}px;
     height: ${props => props.height}px;
     border-radius: 10px;
