@@ -30,22 +30,4 @@ export const KeyboardLineContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-`
-
-
-export const KeyboardItemContainer = styled.div<{
-    width: number,
-    height: number,
-    labelPosition: string
-}>`
-    display: flex;
-    align-items: center;
-    justify-content: ${props => props.labelPosition};
-
-    padding: 0.5rem;
-    width: ${props => props.width}px;
-    height: ${props => props.height}px;
-    border-radius: 10px;
-
-    background: var(--black-100);
-`
+`;

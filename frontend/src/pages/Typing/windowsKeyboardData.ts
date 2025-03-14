@@ -1,6 +1,6 @@
-import { WindowsKeyboardData } from ".";
+import { WindowsKeyboardType } from ".";
 
-export const WINDOWS_KEYBOARD_DATA_FIRST_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_FIRST_LINE: WindowsKeyboardType[] = [
     { id: 0, label: 'esc', labelPosition: 'left', width: 60, height: 30 },
 
     { id: 1, label: 'F1', labelPosition: 'left', width: 45, height: 30 },
@@ -17,7 +17,7 @@ export const WINDOWS_KEYBOARD_DATA_FIRST_LINE: WindowsKeyboardData[] = [
     { id: 12, label: 'F12', labelPosition: 'left', width: 45, height: 30 },
 ]
 
-export const WINDOWS_KEYBOARD_DATA_SECOND_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_SECOND_LINE: WindowsKeyboardType[] = [
     { id: 13, label: '`', labelPosition: 'left', secondaryLabel: '~', width: 40, height: 40 },
     { id: 14, label: '1', labelPosition: 'left', secondaryLabel: '!', width: 40, height: 40 },
     { id: 15, label: '2', labelPosition: 'left', secondaryLabel: '@', width: 40, height: 40 },
@@ -35,7 +35,7 @@ export const WINDOWS_KEYBOARD_DATA_SECOND_LINE: WindowsKeyboardData[] = [
 
 ];
 
-export const WINDOWS_KEYBOARD_DATA_THIRD_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_THIRD_LINE: WindowsKeyboardType[] = [
     { id: 27, label: 'Tab', labelPosition: 'left', width: 60, height: 40 },
     { id: 28, label: 'Q', labelPosition: 'center', width: 40, height: 40 },
     { id: 29, label: 'W', labelPosition: 'center', width: 40, height: 40 },
@@ -52,7 +52,7 @@ export const WINDOWS_KEYBOARD_DATA_THIRD_LINE: WindowsKeyboardData[] = [
     { id: 40, label: '\\', labelPosition: 'center', width: 40, height: 40 },
 ]
 
-export const WINDOWS_KEYBOARD_DATA_FOURTH_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_FOURTH_LINE: WindowsKeyboardType[] = [
     { id: 41, label: 'Caps Lock', labelPosition: 'left', width: 70, height: 40 },
     { id: 42, label: 'A', labelPosition: 'center', width: 40, height: 40 },
     { id: 43, label: 'S', labelPosition: 'center', width: 40, height: 40 },
@@ -68,7 +68,7 @@ export const WINDOWS_KEYBOARD_DATA_FOURTH_LINE: WindowsKeyboardData[] = [
     { id: 53, label: 'Enter', labelPosition: 'right', width: 100, height: 40 },
 ];
 
-export const WINDOWS_KEYBOARD_DATA_FIFTH_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_FIFTH_LINE: WindowsKeyboardType[] = [
     { id: 54, label: 'Shift', labelPosition: 'left', width: 90, height: 40 },
     { id: 55, label: 'Z', labelPosition: 'center', width: 40, height: 40 },
     { id: 56, label: 'X', labelPosition: 'center', width: 40, height: 40 },
@@ -83,7 +83,7 @@ export const WINDOWS_KEYBOARD_DATA_FIFTH_LINE: WindowsKeyboardData[] = [
     { id: 65, label: 'Shift', labelPosition: 'right', width: 110, height: 40 },
 ];
 
-export const WINDOWS_KEYBOARD_DATA_SIXTH_LINE: WindowsKeyboardData[] = [
+export const WINDOWS_KEYBOARD_DATA_SIXTH_LINE: WindowsKeyboardType[] = [
     { id: 66, label: 'Ctrl', labelPosition: 'left', width: 40, height: 40 },
     { id: 67, label: 'Fn', labelPosition: 'center', width: 40, height: 40 },
     { id: 68, label: 'Win', labelPosition: 'center', width: 40, height: 40 },

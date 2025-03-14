@@ -1,7 +1,6 @@
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import {
   PageContainer,
-  KeyboardItemContainer,
   KeyboardLineContainer
 } from "./styles";
 import {
@@ -12,13 +11,15 @@ import {
   WINDOWS_KEYBOARD_DATA_SIXTH_LINE,
   WINDOWS_KEYBOARD_DATA_THIRD_LINE
 } from "./windowsKeyboardData";
-export interface WindowsKeyboardData {
+import { KeyboardItem } from "../../components/KeyboardItem";
+export interface WindowsKeyboardType {
   id: number;
   label: string;
   labelPosition: 'center' | 'left' | 'right';
   secondaryLabel?: string;
   width: number;
   height: number;
+  children?: React.ReactNode;
 }
 
 export function Typing() {
@@ -27,30 +28,18 @@ export function Typing() {
       <main>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_FIRST_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_FIRST_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
-                  {keyboardItem.label}
-                </KeyboardItemContainer>
+                <KeyboardItem {...keyboardItem}>{keyboardItem.label}</KeyboardItem>
               )
             })
           }
         </KeyboardLineContainer>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_SECOND_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_SECOND_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
+                <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                       <p>{keyboardItem.secondaryLabel}</p>
@@ -59,37 +48,25 @@ export function Typing() {
                     :
                     keyboardItem.label
                   }
-                </KeyboardItemContainer>
+                </KeyboardItem>
               )
             })
           }
         </KeyboardLineContainer>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_THIRD_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_THIRD_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
-                  {keyboardItem.label}
-                </KeyboardItemContainer>
+                <KeyboardItem {...keyboardItem}>{keyboardItem.label}</KeyboardItem>
               )
             })
           }
         </KeyboardLineContainer>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_FOURTH_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_FOURTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
+                <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                       <p>{keyboardItem.secondaryLabel}</p>
@@ -98,21 +75,16 @@ export function Typing() {
                     :
                     keyboardItem.label
                   }
-                </KeyboardItemContainer>
+                </KeyboardItem>
               )
             })
           }
         </KeyboardLineContainer>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_FIFTH_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_FIFTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
+                <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                       <p>{keyboardItem.secondaryLabel}</p>
@@ -121,21 +93,16 @@ export function Typing() {
                     :
                     keyboardItem.label
                   }
-                </KeyboardItemContainer>
+                </KeyboardItem>
               )
             })
           }
         </KeyboardLineContainer>
         <KeyboardLineContainer>
           {
-            WINDOWS_KEYBOARD_DATA_SIXTH_LINE.map((keyboardItem: WindowsKeyboardData, index) => {
+            WINDOWS_KEYBOARD_DATA_SIXTH_LINE.map((keyboardItem: WindowsKeyboardType) => {
               return (
-                <KeyboardItemContainer
-                  key={index}
-                  width={keyboardItem.width}
-                  height={keyboardItem.height}
-                  labelPosition={keyboardItem.labelPosition}
-                >
+                <KeyboardItem {...keyboardItem}>
                   {keyboardItem.label === 'up-down' ?
                     <div style={{ display: 'flex', width: '100%', flexDirection: 'column', gap: '0.3rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -148,8 +115,7 @@ export function Typing() {
                     :
                     keyboardItem.label
                   }
-                </KeyboardItemContainer>
-
+                </KeyboardItem>
               )
             })
           }
