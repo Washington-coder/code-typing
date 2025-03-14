@@ -23,6 +23,29 @@ export interface WindowsKeyboardType {
 }
 
 export function Typing() {
+
+  function renderKeyWithSecondaryLabel(keyboardItem: WindowsKeyboardType) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+        <p>{keyboardItem.secondaryLabel}</p>
+        <p>{keyboardItem.label}</p>
+      </div>
+    )
+  }
+
+  function renderUpDownKey() {
+    return (
+      <div style={{ display: 'flex', width: '100%', flexDirection: 'column', gap: '0.3rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <FaChevronUp />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <FaChevronDown />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <PageContainer>
       <main>
@@ -41,10 +64,7 @@ export function Typing() {
               return (
                 <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                      <p>{keyboardItem.secondaryLabel}</p>
-                      <p>{keyboardItem.label}</p>
-                    </div>
+                    renderKeyWithSecondaryLabel(keyboardItem)
                     :
                     keyboardItem.label
                   }
@@ -68,10 +88,7 @@ export function Typing() {
               return (
                 <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                      <p>{keyboardItem.secondaryLabel}</p>
-                      <p>{keyboardItem.label}</p>
-                    </div>
+                    renderKeyWithSecondaryLabel(keyboardItem)
                     :
                     keyboardItem.label
                   }
@@ -86,10 +103,7 @@ export function Typing() {
               return (
                 <KeyboardItem {...keyboardItem}>
                   {keyboardItem.secondaryLabel ?
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                      <p>{keyboardItem.secondaryLabel}</p>
-                      <p>{keyboardItem.label}</p>
-                    </div>
+                    renderKeyWithSecondaryLabel(keyboardItem)
                     :
                     keyboardItem.label
                   }
@@ -104,14 +118,7 @@ export function Typing() {
               return (
                 <KeyboardItem {...keyboardItem}>
                   {keyboardItem.label === 'up-down' ?
-                    <div style={{ display: 'flex', width: '100%', flexDirection: 'column', gap: '0.3rem' }}>
-                      <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <FaChevronUp />
-                      </div>
-                      <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <FaChevronDown />
-                      </div>
-                    </div>
+                    renderUpDownKey()
                     :
                     keyboardItem.label
                   }
