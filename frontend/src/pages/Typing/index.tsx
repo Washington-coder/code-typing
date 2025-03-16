@@ -1,6 +1,8 @@
 import {
   PageContainer,
-  KeyboardLineContainer
+  KeyboardLineContainer,
+  KeyboardContainer,
+  KeyboardContainerUp,
 } from "./styles";
 import {
   WINDOWS_KEYBOARD_DATA_FIFTH_LINE,
@@ -11,6 +13,8 @@ import {
   WINDOWS_KEYBOARD_DATA_THIRD_LINE
 } from "./windowsKeyboardData";
 import { KeyboardItem } from "../../components/KeyboardItem";
+import { FaChevronUp } from "react-icons/fa";
+import { useState } from "react";
 export interface WindowsKeyboardType {
   id: number;
   label: string;
@@ -30,10 +34,18 @@ const KYEBOARD_LINES = [
 ]
 
 export function Typing() {
+  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
 
   return (
     <PageContainer>
-      <main>
+      <h1>Typing</h1>
+      <KeyboardContainer isVisible={isKeyboardVisible} >
+        <KeyboardContainerUp onClick={() => setIsKeyboardVisible(!isKeyboardVisible)}>
+          <span>
+            <FaChevronUp size={24} />
+          </span>
+        </KeyboardContainerUp>
+
         {
           KYEBOARD_LINES.map((keyboardLine: WindowsKeyboardType[]) => {
             return (
@@ -49,7 +61,7 @@ export function Typing() {
             )
           })
         }
-      </main>
+      </KeyboardContainer>
     </PageContainer>
   )
 }
