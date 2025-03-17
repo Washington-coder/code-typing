@@ -3,10 +3,30 @@ import styled from 'styled-components'
 export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     width: 100%;
     height: 100vh;
+`;
+
+export const CodeContainer = styled.main`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7.5rem;
+    
+    width: 60%;
+    max-height: 60vh;
+    overflow-y: auto;
+    
+    pre {
+        font-size: x-large;
+        margin: 3rem;
+        margin-top: 9rem;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
 `;
 
 export const KeyboardContainer = styled.div<{

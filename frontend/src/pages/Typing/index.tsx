@@ -3,6 +3,7 @@ import {
   KeyboardLineContainer,
   KeyboardContainer,
   KeyboardContainerUp,
+  CodeContainer
 } from "./styles";
 import {
   WINDOWS_KEYBOARD_DATA_FIFTH_LINE,
@@ -12,6 +13,7 @@ import {
   WINDOWS_KEYBOARD_DATA_SIXTH_LINE,
   WINDOWS_KEYBOARD_DATA_THIRD_LINE
 } from "./windowsKeyboardData";
+import { codeExample } from './codeExample'
 import { KeyboardItem } from "../../components/KeyboardItem";
 import { FaChevronUp } from "react-icons/fa";
 import { useState } from "react";
@@ -38,7 +40,9 @@ export function Typing() {
 
   return (
     <PageContainer>
-      <h1>Typing</h1>
+      <CodeContainer>
+        <pre>{codeExample}</pre>
+      </CodeContainer>
       <KeyboardContainer isVisible={isKeyboardVisible} >
         <KeyboardContainerUp onClick={() => setIsKeyboardVisible(!isKeyboardVisible)}>
           <span>
